@@ -2,5 +2,6 @@
 ## Title: ClassMountSummon by |cFF69CCF0Fugazi|r
 ## Notes: /cmount: Summons your class hall mount from Legion
 ## IconTexture: Interface\Icons\INV_Horse3_White.tga
+## Version: 1.0.0
 
 cmount.lua
