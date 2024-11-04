@@ -1,0 +1,6 @@
+## Interface: 110005
+## Title: ClassMountSummon by |cFF69CCF0Fugazi|r
+## Notes: /cmount: Summons your class hall mount from Legion
+## IconTexture: Interface\Icons\INV_Horse3_White.tga
+
+cmount.lua
