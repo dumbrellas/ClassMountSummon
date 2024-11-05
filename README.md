@@ -18,6 +18,6 @@ Druid warning:
 
 
 ## To do
-- [] Better warning message for classes with no class mounts available (just Evoker atm)
-- [] Better warning message for Druids. Include a check if it's unlocked or not and display as such.
-- [] Better class mount tracking, show which mounts are still locked
+- [ ] Better warning message for classes with no class mounts available (just Evoker atm)
+- [ ] Better warning message for Druids. Include a check if it's unlocked or not and display as such.
+- [ ] Better class mount tracking, show which mounts are still locked
