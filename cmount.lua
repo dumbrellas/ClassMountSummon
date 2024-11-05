@@ -19,6 +19,17 @@ local classMountSpellIDs = {
     ["WARRIOR"] = { 229388 } -- Battlelord's Bloodthirsty War Wyrm
 }
 
+-- Function to get the class name with class color
+local function GetClassColoredName()
+    local className, classFile, _ = UnitClass("player")
+    local color = RAID_CLASS_COLORS[classFile]
+    if color then
+        return string.format("|cff%02x%02x%02x%s|r", color.r * 255, color.g * 255, color.b * 255, className)
+    else
+        return className
+    end
+end
+
 -- Function to find and aggregate known mounts from a list of spell IDs
 local function GetKnownMountIDsFromSpellIDs(spellIDs)
     local mountIDs = C_MountJournal.GetMountIDs()
@@ -41,17 +52,16 @@ end
 -- Function to summon the class hall mount
 function SummonClassMount()
     local _, playerClass = UnitClass("player")
-
-    -- Special handling for Druids
-    if playerClass == "DRUID" then
-        print("Druids use their flight form as their class mount.")
-        return
-    end
-
     local spellIDs = classMountSpellIDs[playerClass]
 
+        -- Special handling for Druids
+        if playerClass == "DRUID" then
+            print( GetClassColoredName() .. "s use their flight form as their class mount.")
+            return
+        end
+
     if not spellIDs then
-        print("No class mount available for your class.")
+        print("No class mount available for " .. GetClassColoredName() .. ".")
         return
     end
 
