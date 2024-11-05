@@ -56,7 +56,7 @@ function SummonClassMount()
 
         -- Special handling for Druids
         if playerClass == "DRUID" then
-            print( GetClassColoredName() .. "s use their flight form as their class mount.")
+            print( GetClassColoredName() .. "|cFFFF7C0As|r use their flight form as their class mount.")
             return
         end
 
